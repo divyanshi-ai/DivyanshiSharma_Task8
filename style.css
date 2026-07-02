@@ -1,0 +1,220 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin:10px 0px 0px 0px;
+}
+
+.container{
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+
+}
+
+.logo{
+    font-size: 30px;
+    padding-left: 60px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgba(0, 0, 0, 0.736) ;
+}
+.username{
+    margin-right:40px;
+    padding:15px;
+    font-size: 20px;
+    border: solid transparent  2px;
+    background-color: rgba(0, 255, 255, 0.108);
+    border-radius: 15px;
+    color:rgb(0, 213, 255)
+}
+
+.navbar{
+
+         text-decoration: none;
+    display: flex;
+    gap: 30px;
+    font-size: 25px;
+}
+
+.navbar a{
+    text-decoration: none;
+          color:gray;
+}
+.navbar a:hover{
+    color:rgb(74, 248, 248);
+}
+
+.HeroSection{
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+
+.left{
+     flex-basis: 40%;
+     padding-top:40px;
+}
+.left h1{
+    font-size:60px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:rgb(64, 64, 64);
+}
+
+.left span{
+    color:rgba(0, 191, 255, 0.8);
+}
+
+.left p{
+      margin:15px 0px 30px 0px ;
+      font-size: 25px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: rgba(67, 66, 66, 0.627);
+}  
+
+.left button{
+           padding: 25px 60px;
+           border-radius: 15px;
+           background-color:rgb(0, 191, 255);
+           border: none;
+           color: white;
+           
+}
+
+.left button:hover{
+    background-color: rgb(0, 140, 255);
+    cursor: pointer;
+}
+ 
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+} 
+ 
+ .menu-list{
+    display: none;
+ }
+ 
+
+@media (min-width:425px) and (max-width:768px){
+   
+    .logo{
+         font-size: 25px;
+         padding-left: 20px;
+    }
+    .navbar{
+        font-size: 20px;
+    }
+    .username{
+        font-size: 15px;
+        margin-right: 0px;
+    }
+
+    .left h1{
+font-size:40px;
+    }
+    .left p{
+        font-size: 15px;
+    }
+    .right img{
+        width:400px;
+        height:auto;
+    }
+}
+
+
+@media (max-width:425px){
+    .logo{
+         font-size:20px;
+         padding: 0px 0px 0px 5px;
+    }
+
+.container{
+    gap:5px;
+}
+ .navbar{
+        display: none;
+    }
+
+.hamburger-btn {
+        display: block;
+        position: fixed;
+       top: 15px;
+       right: 15px;
+       z-index: 101;
+       outline: none;
+}
+    .username{
+        font-size: 15px;
+        margin-right: 50px;
+    }
+
+    .left h1{
+font-size:30px;
+padding-top: 0;
+margin-top: 0;
+    }
+    .left p{
+        font-size: 15px;
+       
+      margin:0px 0px 30px 0px;
+    }
+   
+     .left{
+        padding: 10px;
+     }
+.right img{
+        width:300px;
+        height:auto;
+
+    }
+
+   .HeroSection{
+    display: flex;
+    flex-direction: column;
+   }
+   .container{
+    padding:15px;
+   }
+   .top{
+    margin:0px;
+   }
+
+   .menu-list{
+    display:none;
+    flex-direction: column;
+    top:0;
+    right:0;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+    width:50% ;
+    height: 100vh;
+    z-index: 100;
+    background-color: black;
+    position:absolute;
+}
+
+.menu-list a{
+    color:aliceblue;
+    text-decoration: none;
+   }
+
+.hamburger-btn:focus ~ .menu-list,
+    .menu-list:hover,
+    .menu-list:focus-within {
+        display: flex !important;
+    }
+
+
+
+}
